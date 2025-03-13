@@ -1,4 +1,3 @@
-/* admin/add_project.php - Add Project */
 <?php
 include '../config.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -9,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt = $conn->prepare("INSERT INTO projects (title, description, image) VALUES (?, ?, ?)");
     $stmt->execute([$title, $description, $image]);
     echo "Project added!";
+    header('Location: dashboard.php');
 }
 ?>
 <form method="POST" enctype="multipart/form-data">

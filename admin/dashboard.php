@@ -1,4 +1,3 @@
-/* admin/dashboard.php - Admin Panel */
 <?php
 include '../config.php';
 if (!isset($_SESSION['admin'])) {
